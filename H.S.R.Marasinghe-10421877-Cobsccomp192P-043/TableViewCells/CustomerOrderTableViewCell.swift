@@ -10,15 +10,23 @@ import UIKit
 
 class CustomerOrderTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var lblOrderId: UILabel!
+    @IBOutlet weak var lblCustomerName: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
     
+    
+    func setupUI(order: Order){
+        lblOrderId.text = order.orderId
+        lblCustomerName.text = order.customerName
+        //lblStatus.text = order.orderStatus
+        //lblTotal.text = "LKR: \(order.orderTotal)"
+    }
 }

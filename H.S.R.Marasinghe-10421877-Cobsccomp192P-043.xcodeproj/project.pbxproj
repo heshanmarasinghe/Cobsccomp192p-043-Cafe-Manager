@@ -37,6 +37,8 @@
 		568155B42629C5760070F702 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568155B32629C5760070F702 /* Entity.swift */; };
 		568155B72629C5A60070F702 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568155B62629C5A60070F702 /* SessionManager.swift */; };
 		568155B92629C5CC0070F702 /* InputValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568155B82629C5CC0070F702 /* InputValidator.swift */; };
+		56AED0BF2639D3F50072D92F /* OrderItemsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AED0BD2639D3F50072D92F /* OrderItemsTableViewCell.swift */; };
+		56AED0C02639D3F50072D92F /* OrderItemsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56AED0BE2639D3F50072D92F /* OrderItemsTableViewCell.xib */; };
 		8124FC853152E3D69B5D7045 /* Pods_H_S_R_Marasinghe_10421877_Cobsccomp192P_043.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D2D66C53263965CE93D40E4 /* Pods_H_S_R_Marasinghe_10421877_Cobsccomp192P_043.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +76,8 @@
 		568155B32629C5760070F702 /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
 		568155B62629C5A60070F702 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		568155B82629C5CC0070F702 /* InputValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputValidator.swift; sourceTree = "<group>"; };
+		56AED0BD2639D3F50072D92F /* OrderItemsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItemsTableViewCell.swift; sourceTree = "<group>"; };
+		56AED0BE2639D3F50072D92F /* OrderItemsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderItemsTableViewCell.xib; sourceTree = "<group>"; };
 		7A0EDBFA4EB96450CCA9EBA8 /* Pods-H.S.R.Marasinghe-10421877-Cobsccomp192P-043.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-H.S.R.Marasinghe-10421877-Cobsccomp192P-043.debug.xcconfig"; path = "Target Support Files/Pods-H.S.R.Marasinghe-10421877-Cobsccomp192P-043/Pods-H.S.R.Marasinghe-10421877-Cobsccomp192P-043.debug.xcconfig"; sourceTree = "<group>"; };
 		9D2D66C53263965CE93D40E4 /* Pods_H_S_R_Marasinghe_10421877_Cobsccomp192P_043.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_H_S_R_Marasinghe_10421877_Cobsccomp192P_043.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -181,6 +185,8 @@
 				568155A62629BDD00070F702 /* CustomerOrderTableViewCell.xib */,
 				568155A92629C0900070F702 /* CustomerOrderReadyTableViewCell.swift */,
 				568155AA2629C0900070F702 /* CustomerOrderReadyTableViewCell.xib */,
+				56AED0BD2639D3F50072D92F /* OrderItemsTableViewCell.swift */,
+				56AED0BE2639D3F50072D92F /* OrderItemsTableViewCell.xib */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -266,6 +272,7 @@
 				568155A42629BAA10070F702 /* AccountOrdersTableViewCell.xib in Resources */,
 				5647E913262956B800D713C0 /* LaunchScreen.storyboard in Resources */,
 				565287D32635D0C0007250C6 /* GoogleService-Info.plist in Resources */,
+				56AED0C02639D3F50072D92F /* OrderItemsTableViewCell.xib in Resources */,
 				568155AC2629C0900070F702 /* CustomerOrderReadyTableViewCell.xib in Resources */,
 				568155A82629BDD00070F702 /* CustomerOrderTableViewCell.xib in Resources */,
 				5673C2702629A69300FE3D99 /* CategoryTableViewCell.xib in Resources */,
@@ -341,6 +348,7 @@
 				5673C2652629653000FE3D99 /* SignUpViewController.swift in Sources */,
 				568155B02629C4CE0070F702 /* AccountViewController.swift in Sources */,
 				5673C2692629A21C00FE3D99 /* FoodTableViewCell.swift in Sources */,
+				56AED0BF2639D3F50072D92F /* OrderItemsTableViewCell.swift in Sources */,
 				568155B22629C5160070F702 /* CustomerDetailsViewController.swift in Sources */,
 				5681559E2629B8A40070F702 /* CategoryViewController.swift in Sources */,
 				5673C26F2629A69300FE3D99 /* CategoryTableViewCell.swift in Sources */,

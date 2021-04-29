@@ -10,7 +10,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="H_S_R_Marasinghe_10421877_Cobsccomp192P_043" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Cafe_Manager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -58,7 +58,7 @@
         <!--Sign In View Controller-->
         <scene sceneID="nFD-uS-eqB">
             <objects>
-                <viewController id="xOx-dp-Bjx" customClass="SignInViewController" customModule="H_S_R_Marasinghe_10421877_Cobsccomp192P_043" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="xOx-dp-Bjx" customClass="SignInViewController" customModule="Cafe_Manager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UlQ-4g-OXP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -197,7 +197,7 @@
         <!--Sign Up View Controller-->
         <scene sceneID="KVH-v1-acl">
             <objects>
-                <viewController id="g8N-WI-A1D" customClass="SignUpViewController" customModule="H_S_R_Marasinghe_10421877_Cobsccomp192P_043" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="g8N-WI-A1D" customClass="SignUpViewController" customModule="Cafe_Manager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yLD-88-r6C">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -395,7 +395,7 @@
         <!--ORDER-->
         <scene sceneID="ilZ-YJ-LeF">
             <objects>
-                <viewController id="jHG-Q3-WQc" customClass="OrderViewController" customModule="H_S_R_Marasinghe_10421877_Cobsccomp192P_043" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jHG-Q3-WQc" customClass="OrderViewController" customModule="Cafe_Manager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gaS-gV-Lqr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -406,50 +406,60 @@
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YJS-YP-xGz">
-                                <rect key="frame" x="15" y="81" width="345" height="201"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UHe-gF-4Uy">
-                                <rect key="frame" x="15" y="297" width="61" height="36"/>
+                                <rect key="frame" x="15" y="251" width="61" height="36"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rL4-Er-LV8">
-                                <rect key="frame" x="15" y="348" width="345" height="250"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pBi-XW-Sjp">
+                                <rect key="frame" x="15" y="71" width="345" height="150"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="MmB-Y2-iTd"/>
+                                    <constraint firstAttribute="height" constant="150" id="C8Z-uK-bpb"/>
                                 </constraints>
+                            </tableView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" estimatedRowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rL4-Er-LV8">
+                                <rect key="frame" x="15" y="307" width="345" height="300"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="Kbv-Ei-Gau"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="jHG-Q3-WQc" id="M5E-yC-V3p"/>
+                                    <outlet property="delegate" destination="jHG-Q3-WQc" id="g9s-nK-pV8"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="rL4-Er-LV8" firstAttribute="leading" secondItem="cte-ea-il4" secondAttribute="leading" constant="15" id="588-FB-aHe"/>
-                            <constraint firstItem="YJS-YP-xGz" firstAttribute="leading" secondItem="cte-ea-il4" secondAttribute="leading" constant="15" id="GgX-dI-wOh"/>
-                            <constraint firstItem="UHe-gF-4Uy" firstAttribute="top" secondItem="YJS-YP-xGz" secondAttribute="bottom" constant="15" id="J56-v8-xCE"/>
-                            <constraint firstItem="UHe-gF-4Uy" firstAttribute="leading" secondItem="cte-ea-il4" secondAttribute="leading" constant="15" id="Lrj-eU-g71"/>
-                            <constraint firstItem="cte-ea-il4" firstAttribute="bottom" secondItem="rL4-Er-LV8" secondAttribute="bottom" constant="20" id="Md0-3B-ErL"/>
-                            <constraint firstItem="cte-ea-il4" firstAttribute="trailing" secondItem="YJS-YP-xGz" secondAttribute="trailing" constant="15" id="VAh-Kb-xmT"/>
-                            <constraint firstItem="qo7-MT-SbE" firstAttribute="leading" secondItem="cte-ea-il4" secondAttribute="leading" constant="15" id="XLv-st-aMF"/>
-                            <constraint firstItem="rL4-Er-LV8" firstAttribute="top" secondItem="UHe-gF-4Uy" secondAttribute="bottom" constant="15" id="cz9-cL-uy0"/>
-                            <constraint firstItem="cte-ea-il4" firstAttribute="trailing" secondItem="rL4-Er-LV8" secondAttribute="trailing" constant="15" id="g3l-EO-pgb"/>
-                            <constraint firstItem="qo7-MT-SbE" firstAttribute="top" secondItem="cte-ea-il4" secondAttribute="top" constant="25" id="hF1-uR-hG2"/>
-                            <constraint firstItem="YJS-YP-xGz" firstAttribute="top" secondItem="qo7-MT-SbE" secondAttribute="bottom" constant="20" id="hZG-Z2-1JN"/>
+                            <constraint firstItem="rL4-Er-LV8" firstAttribute="top" secondItem="UHe-gF-4Uy" secondAttribute="bottom" constant="20" id="16G-nR-CDb"/>
+                            <constraint firstItem="pBi-XW-Sjp" firstAttribute="leading" secondItem="cte-ea-il4" secondAttribute="leading" constant="15" id="FFF-AA-7e3"/>
+                            <constraint firstItem="cte-ea-il4" firstAttribute="trailing" secondItem="rL4-Er-LV8" secondAttribute="trailing" constant="15" id="I3k-z1-XaJ"/>
+                            <constraint firstItem="pBi-XW-Sjp" firstAttribute="top" secondItem="qo7-MT-SbE" secondAttribute="bottom" constant="10" id="JBU-qA-HfP"/>
+                            <constraint firstItem="qo7-MT-SbE" firstAttribute="leading" secondItem="cte-ea-il4" secondAttribute="leading" constant="15" id="UXd-aJ-vHd"/>
+                            <constraint firstItem="rL4-Er-LV8" firstAttribute="leading" secondItem="cte-ea-il4" secondAttribute="leading" constant="15" id="W6O-yO-UtL"/>
+                            <constraint firstItem="UHe-gF-4Uy" firstAttribute="leading" secondItem="cte-ea-il4" secondAttribute="leading" constant="15" id="XTM-MY-hho"/>
+                            <constraint firstItem="UHe-gF-4Uy" firstAttribute="top" secondItem="pBi-XW-Sjp" secondAttribute="bottom" constant="30" id="bw4-5G-Ooa"/>
+                            <constraint firstItem="cte-ea-il4" firstAttribute="trailing" secondItem="pBi-XW-Sjp" secondAttribute="trailing" constant="15" id="cDe-gO-4Wz"/>
+                            <constraint firstItem="qo7-MT-SbE" firstAttribute="top" secondItem="cte-ea-il4" secondAttribute="top" constant="25" id="pAo-yg-PsH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cte-ea-il4"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="ORDER" image="shopping-bag" selectedImage="shopping-bag" id="E75-sR-Nfa"/>
+                    <connections>
+                        <outlet property="tblorders" destination="rL4-Er-LV8" id="E3u-Bw-iSJ"/>
+                        <segue destination="MmD-2r-fMK" kind="presentation" identifier="OrderstoOrderItem" modalPresentationStyle="fullScreen" id="4bA-JP-kOH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ara-qm-tvk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="737" y="1379"/>
+            <point key="canvasLocation" x="736.79999999999995" y="1378.56071964018"/>
         </scene>
         <!--Customer Details View Controller-->
         <scene sceneID="l4R-Og-jX8">
             <objects>
-                <viewController id="MmD-2r-fMK" customClass="CustomerDetailsViewController" customModule="H_S_R_Marasinghe_10421877_Cobsccomp192P_043" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="MmD-2r-fMK" customClass="CustomerDetailsViewController" customModule="Cafe_Manager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hfT-Wj-XBr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -472,7 +482,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Items" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgD-a9-r67">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Items" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgD-a9-r67">
                                 <rect key="frame" x="45" y="209" width="51" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <nil key="textColor"/>
@@ -492,6 +502,9 @@
                                 </constraints>
                                 <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button" image="arrow.left" catalog="system"/>
+                                <connections>
+                                    <action selector="btnBackPressed:" destination="MmD-2r-fMK" eventType="touchUpInside" id="M7i-1F-yvt"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -511,6 +524,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BWu-C5-j6X"/>
                     </view>
+                    <connections>
+                        <outlet property="lblCustomerName" destination="3O8-tO-teg" id="CJx-pY-SIL"/>
+                        <outlet property="lblItems" destination="hgD-a9-r67" id="56d-2L-8tM"/>
+                        <outlet property="lblOrderId" destination="XNA-Wf-nZ0" id="ZUf-HM-aPO"/>
+                        <outlet property="lblTotal" destination="n7R-Ae-X6D" id="Oov-BY-0Fu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4BM-ia-Gqt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -519,7 +538,7 @@
         <!--STORE-->
         <scene sceneID="MzP-gJ-5KX">
             <objects>
-                <viewController id="lpA-es-wGx" customClass="StoreViewController" customModule="H_S_R_Marasinghe_10421877_Cobsccomp192P_043" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="lpA-es-wGx" customClass="StoreViewController" customModule="Cafe_Manager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dBz-ZF-DUM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -589,7 +608,7 @@
         <!--ACCOUNT-->
         <scene sceneID="N7Q-YM-Aue">
             <objects>
-                <viewController id="DWj-rA-gT8" customClass="AccountViewController" customModule="H_S_R_Marasinghe_10421877_Cobsccomp192P_043" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="DWj-rA-gT8" customClass="AccountViewController" customModule="Cafe_Manager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rsI-DB-Ynk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -665,7 +684,7 @@
         <!--Food Preview View Controller-->
         <scene sceneID="LtC-8I-or9">
             <objects>
-                <viewController id="qy9-eq-a5q" customClass="FoodPreviewViewController" customModule="H_S_R_Marasinghe_10421877_Cobsccomp192P_043" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="qy9-eq-a5q" customClass="FoodPreviewViewController" customModule="Cafe_Manager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qIL-cG-uQt">
                         <rect key="frame" x="0.0" y="0.0" width="355" height="552"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -699,7 +718,7 @@
         <!--Category View Controller-->
         <scene sceneID="Iqg-Bg-IFs">
             <objects>
-                <viewController id="d0x-zM-lAF" customClass="CategoryViewController" customModule="H_S_R_Marasinghe_10421877_Cobsccomp192P_043" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="d0x-zM-lAF" customClass="CategoryViewController" customModule="Cafe_Manager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DgT-dJ-GSl">
                         <rect key="frame" x="0.0" y="0.0" width="355" height="552"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -778,7 +797,7 @@
         <!--Menu View Controller-->
         <scene sceneID="oqm-yz-IWH">
             <objects>
-                <viewController id="rXz-MR-XjH" customClass="MenuViewController" customModule="H_S_R_Marasinghe_10421877_Cobsccomp192P_043" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="rXz-MR-XjH" customClass="MenuViewController" customModule="Cafe_Manager" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oDf-FV-va4">
                         <rect key="frame" x="0.0" y="0.0" width="355" height="552"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

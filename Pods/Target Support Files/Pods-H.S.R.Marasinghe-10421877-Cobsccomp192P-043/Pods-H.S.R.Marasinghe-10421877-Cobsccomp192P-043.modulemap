@@ -1,0 +1,6 @@
+framework module Pods_H_S_R_Marasinghe_10421877_Cobsccomp192P_043 {
+  umbrella header "Pods-H.S.R.Marasinghe-10421877-Cobsccomp192P-043-umbrella.h"
+
+  export *
+  module * { export * }
+}

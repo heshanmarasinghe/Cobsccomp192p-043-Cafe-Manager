@@ -26,9 +26,11 @@ struct FoodItem {
 }
 
 struct Order{
+    var customerName: String = ""
     var orderId: String = ""
     var orderStatus: String = ""
     var orderTotal: Double = 0
+    var foodItems: [String] = []
 }
 
 struct Category {
