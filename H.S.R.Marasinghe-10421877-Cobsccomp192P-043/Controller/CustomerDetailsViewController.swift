@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import Firebase
 
 class CustomerDetailsViewController: UIViewController {
 
-    
+    var ref: DatabaseReference!
     var orderItem: Order?
     
     @IBOutlet weak var lblCustomerName: UILabel!
@@ -19,14 +20,16 @@ class CustomerDetailsViewController: UIViewController {
     @IBOutlet weak var lblItems: UILabel!
     
     override func viewDidLoad() {
+        ref = Database.database().reference()
         super.viewDidLoad()
         
         if let item = self.orderItem{
-            lblCustomerName.text = item.customerName
+            //lblCustomerName.text = item.customerName
             lblOrderId.text = item.orderId
             lblTotal.text = "LKR: \(item.orderTotal)"
             
             lblItems.text = item.foodItems.joined(separator: "\n")
+            getUserData(email: item.customerName)
          }
 
     }
@@ -35,4 +38,30 @@ class CustomerDetailsViewController: UIViewController {
     @IBAction func btnBackPressed(_ sender: UIButton) {
          self.dismiss(animated: true, completion: nil)
     }
+    
+    
+    func getUserData(email: String) {
+        var user = User(userName: "", userEmail: "", userPassword: "", userPhone: "")
+            ref.child("users").child(email
+                .replacingOccurrences(of: "@", with: "_")
+                .replacingOccurrences(of: ".", with: "_")).observe(.value, with: {
+                (snapshot) in
+                        
+                     if snapshot.hasChildren(){
+                            
+                            if let data = snapshot.value{
+                                if let userData = data as? [String: String]
+                                {
+                                     user = User(
+                                        userName: userData["userName"]!,
+                                        userEmail: userData["userEmail"]!,
+                                        userPassword: userData["userPassword"]!,
+                                        userPhone: userData["userPhone"]!)
+                                    
+                                    self.lblCustomerName.text =  user.userName
+                                }
+                            }
+                   }
+            })
+      }
 }

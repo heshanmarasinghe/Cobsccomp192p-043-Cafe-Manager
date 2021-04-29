@@ -29,8 +29,10 @@ struct Order{
     var customerName: String = ""
     var orderId: String = ""
     var orderStatus: String = ""
+    var foodPrice: [String] = []
     var orderTotal: Double = 0
     var foodItems: [String] = []
+    var date: String = ""
 }
 
 struct Category {

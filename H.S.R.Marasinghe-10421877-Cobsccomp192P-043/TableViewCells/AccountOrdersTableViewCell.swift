@@ -10,15 +10,26 @@ import UIKit
 
 class AccountOrdersTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var lblDate: UILabel!
+    @IBOutlet weak var lblItems: UILabel!
+    @IBOutlet weak var lblTotal: UILabel!
+    @IBOutlet weak var lblPrice: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func setupUI(order: Order){
+        lblDate.text = order.date
+        lblItems.text = order.foodItems.joined(separator: "\n")
+        lblPrice.text = order.foodPrice.joined(separator: "\n")
+        lblTotal.text = "LKR: \(order.orderTotal)"
     }
     
 }

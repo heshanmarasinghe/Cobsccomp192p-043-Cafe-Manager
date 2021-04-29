@@ -42,9 +42,6 @@ extension OrderViewController {
                 
         self.orders.removeAll()
         self.ref.child("orders")
-//            .child(sessionMGR.getUserLogin().userEmail
-//            .replacingOccurrences(of: "@", with: "_")
-//            .replacingOccurrences(of: ".", with: "_"))
             .observe(.value, with: {
                 snapshot in
 
@@ -60,24 +57,25 @@ extension OrderViewController {
                             if let orderInfo = singleOrder.value as? [String: Any] {
                                 placedOrder.orderStatus = orderInfo["status"] as! String
                                 if let orderItems = orderInfo["orderItems"] as? [Any] {
+                                    placedOrder.foodItems.removeAll()
+                                    placedOrder.orderTotal = 0
                                     for item in orderItems {
                                         if let itemInfo = item as? [String: Any] {
                                             placedOrder.orderTotal += (itemInfo["foodPrice"] as? Double)!
                                             placedOrder.foodItems.append(((itemInfo["foodName"] as? String)!))
                                         }
                                     }
-                                    //placedOrder.foodItems = orderItems as! [FoodItem]
                                 }
                             }
                             self.orders.append(placedOrder)
                         }
                     }
-                        
                   self.tblorders.reloadData()
                 }
-                 }
-                }
-            })
+            }
+                   
+           }
+        })
     }
 }
 
