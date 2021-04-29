@@ -34,5 +34,6 @@ struct Order{
 }
 
 struct Category {
+    var categoryId: String
     var categoryName: String
 }

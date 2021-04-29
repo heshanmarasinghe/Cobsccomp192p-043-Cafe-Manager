@@ -22,12 +22,18 @@ class CategoryViewController: UIViewController {
     @IBOutlet weak var txtCategory: UITextField!
     
     @IBOutlet weak var tblCategory: UITableView!
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         ref = Database.database().reference()
         tblCategory.register(UINib(nibName: "CategoryTableViewCell", bundle: nil), forCellReuseIdentifier: "CategoryTableIdentifier")
         getMaximumFoodId()
+        NotificationCenter.default.addObserver(self, selector: #selector(loadList), name: NSNotification.Name(rawValue: "load"), object: nil)
+    }
+    
+    @objc func loadList(notification: NSNotification){
+        Loaf("Category Deleted Successfully!!", state: .success, sender: self).show()
+        getCategories()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -101,7 +107,8 @@ extension CategoryViewController{
                         {
                             if let foodInfo = item.value as? [String: Any]
                             {
-                                let singleFoodItem = Category(categoryName:foodInfo["category"] as! String)
+                                let singleFoodItem = Category(categoryId: item.key,
+                                                              categoryName:foodInfo["category"] as! String)
                                                                 
                                 self.foodItems.append(singleFoodItem)
                             }
@@ -127,5 +134,6 @@ extension CategoryViewController : UITableViewDelegate, UITableViewDataSource {
         cell.setupView(foodItem: foodItems[indexPath.row]);
         return cell
     }
-
 }
+
+

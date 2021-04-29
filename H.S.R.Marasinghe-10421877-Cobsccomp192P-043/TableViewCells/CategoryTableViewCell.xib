@@ -31,7 +31,17 @@
                         <state key="normal" title="Delete">
                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </state>
+                        <connections>
+                            <action selector="onDeletePressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ZqX-Vm-Gk5"/>
+                        </connections>
                     </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kqo-ys-aF9">
+                        <rect key="frame" x="108" y="25" width="17" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="ige-iC-stt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="25" id="26p-FA-sxO"/>
@@ -43,6 +53,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="lblCategory" destination="ige-iC-stt" id="Brv-nR-w9Q"/>
+                <outlet property="lblId" destination="Kqo-ys-aF9" id="TP2-xB-9Wm"/>
             </connections>
             <point key="canvasLocation" x="132" y="133"/>
         </tableViewCell>
