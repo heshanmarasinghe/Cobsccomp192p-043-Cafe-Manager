@@ -53,7 +53,7 @@ extension OrderViewController {
         self.filteredOrders.removeAll()
         self.orders.removeAll()
         self.ref.child("orders")
-            .observe(.value, with: {
+            .observeSingleEvent(of: .value, with: {
                 snapshot in
 
                 self.filteredOrders.removeAll()
