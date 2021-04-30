@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryCollectionViewIdentifier" id="gTV-IL-0wX" customClass="CategoryCollectionViewCell" customModule="Cafe_Manager" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="100" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rbG-K3-O27">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="50"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jUe-qe-8a1">
+                                <rect key="frame" x="15" y="5" width="70" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jUe-qe-8a1" firstAttribute="top" secondItem="rbG-K3-O27" secondAttribute="top" constant="5" id="6tT-Wa-PKr"/>
+                            <constraint firstItem="jUe-qe-8a1" firstAttribute="leading" secondItem="rbG-K3-O27" secondAttribute="leading" constant="15" id="Odi-ht-5RF"/>
+                            <constraint firstAttribute="trailing" secondItem="jUe-qe-8a1" secondAttribute="trailing" constant="15" id="Z7q-fm-x3i"/>
+                            <constraint firstAttribute="bottom" secondItem="jUe-qe-8a1" secondAttribute="bottom" constant="15" id="ldC-Mq-F1Q"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="rbG-K3-O27" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="YqP-6n-dPr"/>
+                <constraint firstAttribute="trailing" secondItem="rbG-K3-O27" secondAttribute="trailing" id="enL-3d-bdS"/>
+                <constraint firstAttribute="bottom" secondItem="rbG-K3-O27" secondAttribute="bottom" id="ieh-fG-a3i"/>
+                <constraint firstItem="rbG-K3-O27" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="tPA-aX-eWa"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="lblCategory" destination="jUe-qe-8a1" id="uAj-GP-ZQh"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="110.49107142857143"/>
+        </collectionViewCell>
+    </objects>
+</document>

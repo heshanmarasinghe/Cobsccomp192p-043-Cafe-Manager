@@ -19,6 +19,12 @@ class FoodTableViewCell: UITableViewCell {
     @IBOutlet weak var viewContainerDiscount: UIView!
     @IBOutlet weak var lblDiscount: UILabel!
     
+    @IBOutlet weak var switchFoodStatus: UISwitch!
+    
+    var delegate: FoodItemCellAction?
+    var foodItem: FoodItem?
+    var rowIndex = 0
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -28,11 +34,12 @@ class FoodTableViewCell: UITableViewCell {
 
     }
     
-    func setupView(foodItem: FoodItem){
+    func setupView(foodItem: FoodItem, index: Int){
         lblFoodName.text = foodItem.foodName
         lblFoodDescription.text = foodItem.foodDescription
         lblFoodPrice.text = "LKR \(foodItem.foodPrice )"
         imgFood.kf.setImage(with: URL(string: foodItem.image))
+        switchFoodStatus.isOn = foodItem.isActive
         
         if foodItem.discount > 0 {
             lblDiscount.text = "\(foodItem.discount)%"
@@ -41,5 +48,17 @@ class FoodTableViewCell: UITableViewCell {
             lblDiscount.text = ""
             viewContainerDiscount.isHidden = true
         }
+        
+        self.rowIndex = index
+        self.foodItem = foodItem
     }
+    
+
+    @IBAction func onFoodStatusChanged(_ sender: UISwitch) {
+        self.delegate?.onFoodItemStatusChanged(foodItem: self.foodItem!, status: sender.isOn)
+    }
+}
+
+protocol FoodItemCellAction {
+    func onFoodItemStatusChanged(foodItem: FoodItem, status: Bool)
 }

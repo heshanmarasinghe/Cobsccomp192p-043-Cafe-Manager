@@ -68,6 +68,7 @@ class MenuViewController: UIViewController {
         foodItemInfo["image"] = "https://firebasestorage.googleapis.com/v0/b/cafenibm-b7391.appspot.com/o/foodItems%2Fsandwich.png?alt=media&token=359595a3-33e4-4987-b959-3b8aa6202e57"
         foodItemInfo["name"] = txtName.text
         foodItemInfo["price"] = Int(txtPrice.text!)
+        foodItemInfo["isActive"] = true
     
     ref.child("foodItems")
         .child("00\(self.newId)")

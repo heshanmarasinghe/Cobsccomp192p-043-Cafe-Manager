@@ -61,6 +61,9 @@
                     </label>
                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SeM-V7-oxm">
                         <rect key="frame" x="356" y="54.5" width="51" height="31"/>
+                        <connections>
+                            <action selector="onFoodStatusChanged:" destination="KGk-i7-Jjw" eventType="valueChanged" id="OMW-a0-fL8"/>
+                        </connections>
                     </switch>
                 </subviews>
                 <constraints>
@@ -85,6 +88,7 @@
                 <outlet property="lblFoodDescription" destination="5bp-MI-r79" id="V7F-g8-HtM"/>
                 <outlet property="lblFoodName" destination="v3e-W7-MDW" id="TLx-RQ-9xK"/>
                 <outlet property="lblFoodPrice" destination="OfG-TC-eSL" id="81g-2V-jf9"/>
+                <outlet property="switchFoodStatus" destination="SeM-V7-oxm" id="8T9-Na-QDT"/>
                 <outlet property="viewContainerDiscount" destination="0LC-J8-f5D" id="Xg5-fr-NBX"/>
             </connections>
             <point key="canvasLocation" x="140.57971014492756" y="151.33928571428569"/>
