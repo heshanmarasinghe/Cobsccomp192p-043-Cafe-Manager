@@ -12,6 +12,7 @@ import Firebase
 class OrderViewController: UIViewController {
 
     var orders: [Order] = []
+    var filteredOrders: [Order] = []
     var selectOrderItem: Order?
     
     var ref: DatabaseReference!
@@ -35,16 +36,29 @@ class OrderViewController: UIViewController {
         }
     }
 
+    @IBAction func onSegChanged(_ sender: UISegmentedControl) {
+        filterFood(status: "\(sender.selectedSegmentIndex)")
+    }
 }
 
 extension OrderViewController {
+    
+    func filterFood(status: String) {
+        filteredOrders.removeAll()
+        filteredOrders = self.orders.filter{$0.orderStatus == status}
+        tblorders.reloadData()
+    }
+    
     func getAllOrders() {
-                
+        self.filteredOrders.removeAll()
         self.orders.removeAll()
         self.ref.child("orders")
             .observe(.value, with: {
                 snapshot in
 
+                self.filteredOrders.removeAll()
+                self.orders.removeAll()
+                
                 if let data = snapshot.value {
                     var placedOrder = Order()
                     
@@ -70,7 +84,8 @@ extension OrderViewController {
                             self.orders.append(placedOrder)
                         }
                     }
-                  self.tblorders.reloadData()
+                        self.filteredOrders.append(contentsOf: self.orders)
+                        self.tblorders.reloadData()
                 }
             }
                    
@@ -81,17 +96,17 @@ extension OrderViewController {
 
     extension OrderViewController: UITableViewDataSource, UITableViewDelegate{
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return orders.count
+            return filteredOrders.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell = tblorders.dequeueReusableCell(withIdentifier: "CustomerOrderTableIdentifier", for: indexPath) as! CustomerOrderTableViewCell
-            cell.setupUI(order: orders[indexPath.row])
+            cell.setupUI(order: filteredOrders[indexPath.row])
             return cell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectOrderItem = orders[indexPath.row]
+        selectOrderItem = filteredOrders[indexPath.row]
         self.performSegue(withIdentifier: "OrderstoOrderItem", sender: nil)
     }
     

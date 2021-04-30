@@ -12,16 +12,22 @@ import Firebase
 class AccountViewController: UIViewController {
 
     var orders: [Order] = []
+    var filteredOrders: [Order] = []
     let sessionMGR = SessionManager()
     
     var ref: DatabaseReference!
     
+    @IBOutlet weak var txtstartDate: UITextField!
+    
     @IBOutlet weak var tblorders: UITableView!
+    
+    let startDate = UIDatePicker()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         ref = Database.database().reference()
             tblorders.register(UINib(nibName: "AccountOrdersTableViewCell", bundle: nil), forCellReuseIdentifier: "AccountOrdersTableIdentifier")
+        createDatePicker()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -31,9 +37,34 @@ class AccountViewController: UIViewController {
     @IBAction func onSignOutPressed(_ sender: UIButton) {
         sessionMGR.clearUserLoggedState()
     }
+    
+    func createDatePicker() {
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        
+        let donebtn = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
+        toolbar.setItems([donebtn], animated: true)
+        
+        txtstartDate.inputAccessoryView = toolbar
+        txtstartDate.inputView = startDate
+    }
+    
+    @objc func donePressed() {
+        
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .none
+        
+        txtstartDate.text = formatter.string(from: startDate.date)
+        self.view.endEditing(true)
+    }
 }
 
 extension AccountViewController {
+    func filterFood(){
+    }
+    
+    
     func getAllOrders() {
                 
         self.orders.removeAll()

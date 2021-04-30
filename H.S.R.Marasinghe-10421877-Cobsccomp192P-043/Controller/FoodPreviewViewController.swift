@@ -58,7 +58,7 @@ class FoodPreviewViewController: UIViewController {
             func getFoodItemData(){
                 self.foodItems.removeAll()
                 self.filteredFoodItems.removeAll()
-                ref.child("foodItems").observe(.value, with: {
+                ref.child("foodItems").observeSingleEvent(of: .value, with: {
                     (snapshot) in
                     
                     if let data = snapshot.value{
@@ -122,7 +122,7 @@ extension FoodPreviewViewController : UITableViewDelegate, UITableViewDataSource
           func getCategories(){
                
                self.categoryList.removeAll()
-               ref.child("categories").observe(.value, with: {
+            ref.child("categories").observeSingleEvent(of: .value, with: {
                    (snapshot) in
                    
                    if let data = snapshot.value{

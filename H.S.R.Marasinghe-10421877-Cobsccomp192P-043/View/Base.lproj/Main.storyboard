@@ -400,14 +400,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Orders" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qo7-MT-SbE">
-                                <rect key="frame" x="15" y="25" width="91" height="36"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
-                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" estimatedRowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rL4-Er-LV8">
-                                <rect key="frame" x="15" y="86" width="345" height="500"/>
+                                <rect key="frame" x="15" y="81" width="345" height="500"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="500" id="Kbv-Ei-Gau"/>
@@ -417,14 +411,29 @@
                                     <outlet property="delegate" destination="jHG-Q3-WQc" id="g9s-nK-pV8"/>
                                 </connections>
                             </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Rmo-Tx-2bb">
+                                <rect key="frame" x="15" y="15" width="345" height="32"/>
+                                <segments>
+                                    <segment title="Pending"/>
+                                    <segment title="Preparing"/>
+                                    <segment title="Ready"/>
+                                    <segment title="Completed"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="onSegChanged:" destination="jHG-Q3-WQc" eventType="valueChanged" id="V0Y-Mf-Omc"/>
+                                    <action selector="switch:" destination="lpA-es-wGx" eventType="valueChanged" id="YD0-RU-w7s"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="cte-ea-il4" firstAttribute="trailing" secondItem="rL4-Er-LV8" secondAttribute="trailing" constant="15" id="I3k-z1-XaJ"/>
-                            <constraint firstItem="qo7-MT-SbE" firstAttribute="leading" secondItem="cte-ea-il4" secondAttribute="leading" constant="15" id="UXd-aJ-vHd"/>
+                            <constraint firstItem="rL4-Er-LV8" firstAttribute="top" secondItem="Rmo-Tx-2bb" secondAttribute="bottom" constant="35" id="PKC-gd-aG5"/>
+                            <constraint firstItem="Rmo-Tx-2bb" firstAttribute="leading" secondItem="gaS-gV-Lqr" secondAttribute="leading" constant="15" id="Pzb-Ni-JvK"/>
                             <constraint firstItem="rL4-Er-LV8" firstAttribute="leading" secondItem="cte-ea-il4" secondAttribute="leading" constant="15" id="W6O-yO-UtL"/>
-                            <constraint firstItem="qo7-MT-SbE" firstAttribute="top" secondItem="cte-ea-il4" secondAttribute="top" constant="25" id="pAo-yg-PsH"/>
-                            <constraint firstItem="rL4-Er-LV8" firstAttribute="top" secondItem="qo7-MT-SbE" secondAttribute="bottom" constant="25" id="tuy-Sv-7ce"/>
+                            <constraint firstItem="cte-ea-il4" firstAttribute="trailing" secondItem="Rmo-Tx-2bb" secondAttribute="trailing" constant="15" id="gq1-qq-KE4"/>
+                            <constraint firstItem="Rmo-Tx-2bb" firstAttribute="top" secondItem="cte-ea-il4" secondAttribute="top" constant="15" id="paV-o1-YMx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cte-ea-il4"/>
                     </view>
@@ -628,10 +637,20 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Filter Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ubi-9x-ryt">
+                                <rect key="frame" x="175" y="20" width="150" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Bj2-Zg-Me9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="wTc-bT-otS" firstAttribute="bottom" secondItem="gbH-3B-roj" secondAttribute="bottom" constant="24" id="2s6-Mn-RL2"/>
+                            <constraint firstItem="Ubi-9x-ryt" firstAttribute="leading" secondItem="MEd-tf-YtX" secondAttribute="trailing" constant="50" id="51o-1q-dac"/>
+                            <constraint firstItem="Ubi-9x-ryt" firstAttribute="top" secondItem="wTc-bT-otS" secondAttribute="top" constant="20" id="6kO-yV-qny"/>
                             <constraint firstItem="wTc-bT-otS" firstAttribute="trailing" secondItem="gbH-3B-roj" secondAttribute="trailing" constant="30" id="J6R-Kr-lUp"/>
                             <constraint firstItem="gbH-3B-roj" firstAttribute="leading" secondItem="wTc-bT-otS" secondAttribute="leading" constant="30" id="KWZ-ot-N8J"/>
                             <constraint firstItem="khh-N9-NAg" firstAttribute="leading" secondItem="wTc-bT-otS" secondAttribute="leading" constant="15" id="WcY-pa-6iC"/>
@@ -647,6 +666,7 @@
                     <tabBarItem key="tabBarItem" title="ACCOUNT" image="account" selectedImage="account" id="eSi-dF-rY2"/>
                     <connections>
                         <outlet property="tblorders" destination="khh-N9-NAg" id="ObL-f7-g7L"/>
+                        <outlet property="txtstartDate" destination="Ubi-9x-ryt" id="VQw-fc-VsS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d3p-lA-kod" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

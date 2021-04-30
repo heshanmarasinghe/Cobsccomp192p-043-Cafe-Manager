@@ -63,11 +63,20 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t2X-Iv-k6A">
+                        <rect key="frame" x="262.5" y="68" width="82.5" height="17"/>
+                        <color key="backgroundColor" red="1" green="0.43735582750000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="bottom" secondItem="t2X-Iv-k6A" secondAttribute="bottom" constant="15" id="7tz-kn-9Rr"/>
                     <constraint firstItem="F7s-bC-g9D" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="G2i-Fo-qZp"/>
                     <constraint firstItem="9og-d0-ayA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="35" id="QvO-Xj-5jL"/>
                     <constraint firstItem="F7s-bC-g9D" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="35" id="pzr-y6-5Cy"/>
+                    <constraint firstAttribute="trailing" secondItem="t2X-Iv-k6A" secondAttribute="trailing" constant="75" id="rCN-82-NhM"/>
                     <constraint firstAttribute="trailing" secondItem="9og-d0-ayA" secondAttribute="trailing" constant="10" id="t4w-fH-dQu"/>
                     <constraint firstItem="9og-d0-ayA" firstAttribute="leading" secondItem="lph-4z-MTM" secondAttribute="trailing" constant="10" id="tbN-Ph-Ip1"/>
                     <constraint firstItem="lph-4z-MTM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="35" id="zG1-CO-F6c"/>
@@ -77,6 +86,7 @@
             <connections>
                 <outlet property="lblCustomerName" destination="tbg-1b-5Wt" id="0gX-QW-Afa"/>
                 <outlet property="lblOrderId" destination="Zpl-UB-wel" id="Weg-Et-Ghh"/>
+                <outlet property="lblStatus" destination="t2X-Iv-k6A" id="gSm-Iy-OVG"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="132.58928571428572"/>
         </tableViewCell>
