@@ -8,7 +8,6 @@ target 'H.S.R.Marasinghe-10421877-Cobsccomp192P-043' do
   # Pods for H.S.R.Marasinghe-10421877-Cobsccomp192P-043
 pod 'Firebase/Auth'
 pod 'Firebase/Database'
-pod 'Firebase/Storage'
 pod 'Kingfisher', '~> 6.0.0'
 pod 'Loaf'
 
